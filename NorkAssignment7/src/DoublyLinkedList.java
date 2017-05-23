@@ -38,12 +38,8 @@ public class DoublyLinkedList {
 				position = head;
 			}
 			
-			
-			
-			
-
-			
 		}	// DoublyLinkedIterator
+		
 
 	    private TwoWayNode head;
 
@@ -112,15 +108,9 @@ public class DoublyLinkedList {
 				return true;
 
 			TwoWayNode frontEnd = head; // from front toward end
-			TwoWayNode runner = frontEnd.next;
-			TwoWayNode backEnd = runner; //from end toward middle.
-			while(runner.next != null ) {
-				runner = runner.next;
+			TwoWayNode backEnd = head; //from end toward middle.
+			while(backEnd.next != null ) {
 				backEnd = backEnd.next;
-				if(runner.next != null) {
-					runner = runner.next;
-					frontEnd = frontEnd.next;
-				}
 			}
 			
 			boolean isPalindrome = true;
